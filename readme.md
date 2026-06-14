@@ -66,3 +66,12 @@ values
 ('Victoria', 'Roberts', 21, 'B', 'History', 'victoria28@example.com', '2003-06-28', 'B-', 'USA'),
 ('Samuel', 'Turner', 20, 'A', 'IT', 'samuel29@example.com', '2004-10-10', 'O+', 'UK'),
 ('Grace', 'Phillips', 19, 'B', 'Arts', 'grace30@example.com', '2005-02-14', 'A-', 'Ireland');
+// class three
+select first_name, age from  student3;
+select * from student3
+select first_name as "first Name" from  student3;
+select first_name as "first Name", age as user_age from  student3;
+select first_name, blood_group, country, age from student3 order by age desc
+select first_name, blood_group, country, age from student3 order by age asc
+select first_name, blood_group, country, age from student3 order by student_id asc
+select first_name, blood_group, country, age from student3 order by student_id desc
