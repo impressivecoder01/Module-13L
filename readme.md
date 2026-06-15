@@ -83,3 +83,11 @@ select distinct course from student3
 select * from student3 where country = 'UK'
 select first_name, age, last_name, course, grade from student3 where country = 'UK'
 select first_name, age, last_name, course, grade from student3 where grade = 'A'
+
+// class five
+select blood_group, first_name, last_name, country from student3 where blood_group = 'A+'
+select * from student3 where country = 'UK' or country = 'USA'
+select first_name, last_name, country, course, grade from student3 where (grade = 'A' or grade = 'B') and (course = 'Mathematics' or course = 'History')
+select first_name, last_name, country, grade,age from student3 where country = 'USA' and age = '20'
+select first_name, last_name, country, grade, age from student3 where (country = 'UK' or country = 'USA') and age >= 20
+select first_name, last_name, country, grade, age from student3 where (country = 'UK' or country = 'USA') and age >= 20 
