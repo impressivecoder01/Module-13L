@@ -103,3 +103,11 @@ select * from student3 where age between 20 and  22 and country = 'USA' and firs
 select * from student3 where country = 'USA' or country = 'UK' or country = 'Pakistan'
 select * from student3 where country in('USA', 'UK', 'Pakistan')
 select * from student3 where course in('Law', 'History', 'Nursing')
+
+//class seven
+select * from student3 where first_name like 'J%'
+select * from student3 where first_name like '%n'
+select * from student3 where first_name like 'J___'
+select * from student3 where email like 'j%'
+select * from student3 where email like 'J%'
+select * from student3 where email Ilike 'J%'
