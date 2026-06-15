@@ -75,3 +75,11 @@ select first_name, blood_group, country, age from student3 order by age desc
 select first_name, blood_group, country, age from student3 order by age asc
 select first_name, blood_group, country, age from student3 order by student_id asc
 select first_name, blood_group, country, age from student3 order by student_id desc
+
+// class four
+select country from student3
+select distinct country from student3
+select distinct course from student3
+select * from student3 where country = 'UK'
+select first_name, age, last_name, course, grade from student3 where country = 'UK'
+select first_name, age, last_name, course, grade from student3 where grade = 'A'
