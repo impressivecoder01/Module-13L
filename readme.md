@@ -91,3 +91,15 @@ select first_name, last_name, country, course, grade from student3 where (grade 
 select first_name, last_name, country, grade,age from student3 where country = 'USA' and age = '20'
 select first_name, last_name, country, grade, age from student3 where (country = 'UK' or country = 'USA') and age >= 20
 select first_name, last_name, country, grade, age from student3 where (country = 'UK' or country = 'USA') and age >= 20 
+
+//class six 
+select * from student3 where age <= 20
+select * from student3 where country != 'USA'
+select * from student3 where country <> 'USA'
+select * from student3 where country != 'USA' and blood_group = 'O-'
+select * from student3 where age between 20 and  22
+select * from student3 where age between 20 and  22 and country = 'USA'
+select * from student3 where age between 20 and  22 and country = 'USA' and first_name = 'John'
+select * from student3 where country = 'USA' or country = 'UK' or country = 'Pakistan'
+select * from student3 where country in('USA', 'UK', 'Pakistan')
+select * from student3 where course in('Law', 'History', 'Nursing')
