@@ -111,3 +111,16 @@ select * from student3 where first_name like 'J___'
 select * from student3 where email like 'j%'
 select * from student3 where email like 'J%'
 select * from student3 where email Ilike 'J%'
+
+//class eight
+--not
+select * from student3 where country = 'Bangladesh'
+select * from student3 where not country = 'Bangladesh'
+select first_name,last_name,email,grade from student3 where not country = 'Bangladesh'
+select first_name,last_name,email,grade from student3 where not grade = 'A'
+--scaler function
+select first_name from student3
+select upper(first_name) from student3
+select upper(first_name) as first_name_in_upper from student3
+select upper(first_name), first_name, age, country from student3
+
