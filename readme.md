@@ -123,4 +123,14 @@ select first_name from student3
 select upper(first_name) from student3
 select upper(first_name) as first_name_in_upper from student3
 select upper(first_name), first_name, age, country from student3
+select lower(first_name), first_name, age, country from student3
+select concat(first_name, last_name) as "full_name", first_name, age, country from student3
 
+//class nine
+--aggregate function
+select avg(age) from student3
+select max(age) from student3
+select min(age) from student3
+select sum(age) from student3
+select count(first_name) from student3
+select count(*) from student3
