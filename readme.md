@@ -134,3 +134,20 @@ select min(age) from student3
 select sum(age) from student3
 select count(first_name) from student3
 select count(*) from student3
+
+//15
+select true = true
+select true = false
+select null = null
+select null <> null
+insert into student3 (first_name, last_name, age, grade, course, dob, blood_group, country) values('rohan', 'rahman', 24, 'A', 'Physics', '2003-4-23', 'A+', 'Bangladesh')
+select * from student3 where email <> null
+select * from student3 where email is null
+select * from student3 where email is not null
+select coalesce(2, null)
+select coalesce(null, 2)
+select coalesce(null, null, 2)
+select coalesce(3,null, null, 2)
+select coalesce(email, 'Not provided') from student3
+select first_name, last_name, coalesce(email, 'Not provided') as email2 from student3
+select coalesce(email, 'Not provided') as email2 from student3
