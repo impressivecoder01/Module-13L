@@ -177,3 +177,18 @@ select country from student3 group by country
 select country, avg(age) from student3 group by country
 select country, count(*) from student3 group by country
 select grade, count(*) from student3 group by grade
+--
+select course, count(*)  from student3 group by course having count(*) < 1;
+select country, avg(age) from student3 group by country having avg(age)> 20
+
+--
+create table users(
+  id serial primary key, 
+  username varchar(50) not null
+)
+
+create table posts(
+  id serial primary key, 
+  title text not null, 
+  user_id int references users(id)
+)
