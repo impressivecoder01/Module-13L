@@ -169,3 +169,6 @@ update student3 set email = 'default@mail.com' where email like 'r%'
 update student3 set first_name = 'Rohan', age = 24 where student_id = 1
 update student3 set grade= 'C' where student_id = 1 or student_id = 2 or student_id = 3;
 update student3 set grade= 'A' where student_id = 1 or student_id in (1, 2)
+--delete
+delete from student3 where grade = 'C'
+delete from student3 where grade = 'A' and blood_group = 'O-'
