@@ -135,7 +135,7 @@ select sum(age) from student3
 select count(first_name) from student3
 select count(*) from student3
 
-//15
+//15 1
 select true = true
 select true = false
 select null = null
@@ -151,3 +151,12 @@ select coalesce(3,null, null, 2)
 select coalesce(email, 'Not provided') from student3
 select first_name, last_name, coalesce(email, 'Not provided') as email2 from student3
 select coalesce(email, 'Not provided') as email2 from student3
+
+2
+--limit, offset
+select * from student3 limit 5
+select * from student3 where country in('Bangladesh', 'Nepal', 'UK') limit 3
+select * from student3 limit 5 offset 2
+select * from student3 limit 5 offset 5
+select * from student3 limit 5 offset 5 * 0
+select * from student3 limit 5 offset 5 * 1
