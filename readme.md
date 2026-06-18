@@ -192,3 +192,13 @@ create table posts(
   title text not null, 
   user_id int references users(id)
 )
+INSERT INTO posts (title, user_id) VALUES
+('First Post by Akash', 1),
+('Batash writes about weather', 2),
+('Sagor shares sea stories', 3),
+('Nodi talks about rivers', 4),
+('Another post by Akash', 1);
+select title, username  from posts join users on posts.user_id = users.id
+select *  from posts join users on posts.user_id = users.id
+select posts.id, title, username  from posts join users on posts.user_id = users.id
+select p.id, title, username  from posts as p join users on p.user_id = users.id
