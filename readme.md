@@ -160,3 +160,12 @@ select * from student3 limit 5 offset 2
 select * from student3 limit 5 offset 5
 select * from student3 limit 5 offset 5 * 0
 select * from student3 limit 5 offset 5 * 1
+
+3
+--update
+select * from student3
+update student3 set email = 'default@mail.com' where email is null
+update student3 set email = 'default@mail.com' where email like 'r%'
+update student3 set first_name = 'Rohan', age = 24 where student_id = 1
+update student3 set grade= 'C' where student_id = 1 or student_id = 2 or student_id = 3;
+update student3 set grade= 'A' where student_id = 1 or student_id in (1, 2)
