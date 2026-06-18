@@ -172,3 +172,8 @@ update student3 set grade= 'A' where student_id = 1 or student_id in (1, 2)
 --delete
 delete from student3 where grade = 'C'
 delete from student3 where grade = 'A' and blood_group = 'O-'
+--group by
+select country from student3 group by country
+select country, avg(age) from student3 group by country
+select country, count(*) from student3 group by country
+select grade, count(*) from student3 group by grade
