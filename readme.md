@@ -202,3 +202,45 @@ select title, username  from posts join users on posts.user_id = users.id
 select *  from posts join users on posts.user_id = users.id
 select posts.id, title, username  from posts join users on posts.user_id = users.id
 select p.id, title, username  from posts as p join users on p.user_id = users.id
+
+16
+create table employees(
+  employee_id serial primary key,
+  employee_name varchar(100),
+  department_id int references departments (department_id),
+  salary decimal(10,2),
+  hire_date date
+ )
+
+create table departments(
+  department_id serial primary key,
+  department_name varchar(100)
+)
+
+insert into departments (department_name) values
+('Human Resources'),
+('Finance'),
+('Accounting'),
+('Marketing'),
+('Sales'),
+('Information Technology'),
+('Customer Support'),
+('Research and Development'),
+('Operations'),
+('Legal')
+
+insert into employees (employee_name, department_id, salary, hire_date) values
+('Alice Johnson', 1, 55000.00, '2021-03-15'),
+('Bob Smith', 2, 65000.00, '2020-07-22'),
+('Charlie Brown', 3, 48000.00, '2022-01-10'),
+('Diana Prince', 4, 72000.00, '2019-11-05'),
+('Ethan Hunt', 5, 80000.00, '2018-06-30'),
+('Fiona Gallagher', 6, 60000.00, '2021-09-18'),
+('George Martin', 7, 45000.00, '2023-02-25'),
+('Hannah Lee', 8, 90000.00, '2017-12-12'),
+('Ian Wright', 9, 52000.00, '2022-05-08'),
+('Julia Roberts', 10, 75000.00, '2020-10-14')
+
+select * from employees inner join departments on employees.department_id = departments.department_id
+select * from employees as e inner join departments as d on e.department_id = d.department_id
+select * from employees inner join departments using(department_id)
