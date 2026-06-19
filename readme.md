@@ -249,3 +249,13 @@ select department_name, avg(salary) from employees inner join departments using(
 select department_name, round(avg(salary)) from employees inner join departments using(department_id) group by department_name
 select department_name, count(*) from employees inner join departments using(department_id) group by department_name
 select department_name, round(avg(salary)) as avg_salary from employees join departments using(department_id) group by  department_name order by avg_salary desc limit 1
+
+
+select extract(year from hire_date) as hired_year from employees group by hired_year
+select extract(year from hire_date) as hired_year, count(*) from employees group by hired_year
+
+select max(salary) from employees2
+select * from employees2 where salary = 70000
+select * from employees2 where salary = (select max(salary) from employees2)
+select * from employees2 where salary > (select avg(salary) from employees2)
+select * from employees2 where salary = (select max(salary) from employees2 where department = 'IT')
