@@ -244,3 +244,8 @@ insert into employees (employee_name, department_id, salary, hire_date) values
 select * from employees inner join departments on employees.department_id = departments.department_id
 select * from employees as e inner join departments as d on e.department_id = d.department_id
 select * from employees inner join departments using(department_id)
+
+select department_name, avg(salary) from employees inner join departments using(department_id) group by department_name
+select department_name, round(avg(salary)) from employees inner join departments using(department_id) group by department_name
+select department_name, count(*) from employees inner join departments using(department_id) group by department_name
+select department_name, round(avg(salary)) as avg_salary from employees join departments using(department_id) group by  department_name order by avg_salary desc limit 1
