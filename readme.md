@@ -259,3 +259,14 @@ select * from employees2 where salary = 70000
 select * from employees2 where salary = (select max(salary) from employees2)
 select * from employees2 where salary > (select avg(salary) from employees2)
 select * from employees2 where salary = (select max(salary) from employees2 where department = 'IT')
+
+create function emp_counts1() returns int language sql as 
+  $$
+   select count(*) from employees2
+  $$;
+select emp_counts1()
+create function delete_emp_id(emp_id int) returns void language sql as 
+  $$
+   delete from employees2 where id = emp_id
+  $$;
+select delete_emp_id(1)
