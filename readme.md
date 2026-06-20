@@ -270,3 +270,21 @@ create function delete_emp_id(emp_id int) returns void language sql as
    delete from employees2 where id = emp_id
   $$;
 select delete_emp_id(1)
+
+--procedure
+create procedure delete_emp_byid (emp_id int) language plpgsql as 
+$$
+begin
+  delete from employees2 where id = emp_id;
+end;
+$$;  
+call delete_emp_byid(2)
+CREATE PROCEDURE increase_low_salary (dept_name varchar(50)) language plpgsql as $$
+  declare 
+  avg_salary int;
+  begin
+  select avg(salary) from employees2 where department = dept_name
+  end;
+  $$;
+
+  select avg(salary) from employees2 where department = 'IT'
